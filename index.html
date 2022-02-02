@@ -34,6 +34,10 @@
 
 	<body>
 
+		<div class="test">
+			Hello
+		</div>
+
 		<div class="reveal">
 
 			<div class="slides">
@@ -110,7 +114,7 @@ div:hover {
 					<h1>CSS3 Transitions</h1>
 					<p>The simplest type of animation</p>
 					<div class="fragment" data-fragment-index="1">
-						
+
 					<p>Apply the transition property on the element</p>
 					<pre><code>
 div {
@@ -119,7 +123,7 @@ div {
 }
 
 div:hover {
-    background-color: #3DF2C6;	
+    background-color: #3DF2C6;
 }
 					</code></pre>
 					<div class="transition-example"></div>
@@ -136,7 +140,7 @@ div:hover {
 }
 .menu li:hover {
     /* Add the hover state to transition too */
-    background-color: #A8258D; 
+    background-color: #A8258D;
 }
 .menu li:hover a {
     color: #ffffff; /* Lets also change the font color */
@@ -148,7 +152,7 @@ div:hover {
 					<h2>Transition options</h2>
 					<pre><code class="css">
 /* Short hand syntax */
-transition: &lt;property> &lt;duration> &lt;timing-function> &lt;delay>;					
+transition: &lt;property> &lt;duration> &lt;timing-function> &lt;delay>;
 transition: all 1s ease;
 /* Can also be written like this */
 transition-property: all;
@@ -185,7 +189,7 @@ transition-timing-function: ease;
 						<p>Ease-out</p>
 					</div>
 				</section>
-				
+
 				<section>
 					<div class="inline-container two-col">
 						<p>ease</p>
@@ -259,7 +263,7 @@ div {
     -moz-transform: scale(2); /* Firefox */
     -ms-transform: scale(2); /* Internet Explorer */
     /* Added so that this will continue to work in the future */
-    transfom: scale(2); 
+    transfom: scale(2);
 }
 					</code></pre>
 				</section>
@@ -322,7 +326,7 @@ div {
     -webkit-animation: &lt;name> &lt;duration> &lt;iteration-count>;
 }
 						</code></pre>
-					
+
 					</div>
 					<p class="fragment" data-fragment-index="2">Then you add then define your animation.</p>
 					<pre class="fragment" data-fragment-index="2"><code>
@@ -344,7 +348,7 @@ div {
     width: 200px;
     height: 200px;
     background-color: #1A6373;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .keyframe-example:hover {
@@ -362,7 +366,7 @@ div {
     55% { -webkit-tranform: rotate(0deg) scale(2); }
     60% { -webkit-transform: rotate(-10deg) scale(2); }
     100% { -webkit-transform: scale(1); }
-}					
+}
 					</code></pre>
 					<div class="keyframe-example"></div>
 				</section>
@@ -453,10 +457,10 @@ div {
 						<div class="perspective-container small">
 							<div class="perspective-small-example perspective-example"></div>
 						</div>
-						
+
 					</div>
 					<div class="inline-container two-col">
-						
+
 						<pre><code>
 div {
     -webkit-perspective: 600px;
@@ -469,7 +473,7 @@ div {
 				</section>
 
 				<section>
-					<h2>3D functions</h2>					
+					<h2>3D functions</h2>
 					<ul>
 						<li><code>rotateY()</code></li>
 						<li><code>rotateX()</code></li>
@@ -525,7 +529,7 @@ div {
 					<div class="flip-container">
 						<div class="item">
 							<div class="front"></div>
-							<div class="back"></div>	
+							<div class="back"></div>
 						</div>
 					</div>
 				</section>
@@ -551,13 +555,13 @@ div {
 }
 					</code></pre>
 				</section>
-					
+
 				<section>
 					<p>Step 2:</p>
 					<pre><code>
 .item .front {
     background-color: #A8258D;
-    height: 212px;  
+    height: 212px;
     width: 212px;
     margin: 10px;
     border-radius: 50%;
@@ -573,11 +577,11 @@ div {
     position: relative;
     height: 212px;
     /* Add a transition */
-    transition: -webkit-transform 1s ease; 
+    transition: -webkit-transform 1s ease;
     /* Add element into 3D context */
-    -webkit-perspective: 600px; 
+    -webkit-perspective: 600px;
     /* Needed to allow the two faces to rotate */
-    -webkit-transform-style: preserve-3d;   
+    -webkit-transform-style: preserve-3d;
     /* Set the initial value to 0 */
     -webkit-transform: rotateY(0deg);
 }
@@ -588,12 +592,12 @@ div {
 					<pre><code>
 .item .favourite {
     /* Rotate the image to the back and translate it behind */
-    -webkit-transform: translateZ(-1px) rotateY(180deg); 
+    -webkit-transform: translateZ(-1px) rotateY(180deg);
 }
 .item .front {
     /* ... */
     /* Translate the element to the front */
-    -webkit-transform: translateZ(1px) rotateY(0deg); 
+    -webkit-transform: translateZ(1px) rotateY(0deg);
     /* Sets the element to be hidden when rotated around */
     -webkit-backface-visibility: hidden;
 }
